@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="d3.v3.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  
+  <style>
+  line.node-link, path.node-link {
+    fill: none;
+    stroke: black
+  }
+  circle.node {
+    fill: white;
+    stroke: black
+  }
+  text {
+    font-family: sans-serif;
+    pointer-events: none;
+  }
+  circle.node+text {
+    text-anchor: middle;
+  }
+  </style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+
+// --------------------------------初始化数据
+var num = 20;
+function getRandomInt() {return Math.floor(Math.random() * (num));}
+var nodes = d3.range(num).map(function(d) { return {id: d}; });
+var links = d3.range(num).map( d => ({source:getRandomInt(),target:getRandomInt()}) )
+
+// -------------------------------初始化布局
+var force = d3.layout.force()
+    .nodes(nodes)
+    .links(links)
+    .size([width, height]);
+    force.start()
+
+// --------------------------------定义svg
+var width = 500,
+    height = 500;
+var svg = d3.select("body").append("svg")
+    .attr("width",width)
+    .attr("height",height)
+
+// -------------------------------画大圆
+var dim = width-80
+var circle = svg.append("path")
+    .attr("d", "M 40, "+(dim/2+40)+" a "+dim/2+","+dim/2+" 0 1,0 "+dim+",0 a "+dim/2+","+dim/2+" 0 1,0 "+dim*-1+",0")
+    .attr("fill","#f5f5f5")
+
+// -------------------------------求坐标
+
+var circleCoord = function(node, index, num_nodes){
+    var circumference = circle.node().getTotalLength();
+    var sectionLength = (circumference)/num_nodes;
+    var position = sectionLength*index+sectionLength/2;
+    return circle.node().getPointAtLength(circumference-position)
+}
+nodes.forEach(function(n, i) {
+    var coord = circleCoord(n, i, nodes.length)
+    // console.log(i,coord.x,coord.y);
+    n.x = coord.x
+    n.y = coord.y
+});
+
+// -------------------------------画线
+var lines = svg.selectAll("line.node-link")
+  .data(links).enter().append("line")
+  .attr("class", "node-link")
+  .attr("x1", function(d) { return d.source.x; })
+  .attr("y1", function(d) { return d.source.y; })
+  .attr("x2", function(d) { return d.target.x; })
+  .attr("y2", function(d) { return d.target.y; });
+
+var is_connected = function(d, opacity) {
+    lines.transition().style("stroke-opacity", function(o) {
+        return o.source === d || o.target === d ? 1 : opacity;
+    });
+}
+
+// -------------------------------画节点并渲染数据
+var gnodes = svg.selectAll('g.gnode')
+    .data(nodes).enter().append('g')
+    .classed('gnode', true)
+    .attr("transform", function(d) {
+        return "translate(" +d.x+ "," +d.y+ ")"
+    });
+
+var node = gnodes.append("circle")
+    .attr("r", 25)
+    .attr("class", "node");
+
+var labels = gnodes.append("text")
+    .attr("dy", 4)
+    .text(function(d){return d.id})
+
+// -------------------------------交互动作
+node = node
+    .on("mouseenter", function(d) {
+            is_connected(d, 0.1)
+            node.transition().duration(100).attr("r", 25)
+            d3.select(this).transition().duration(100).attr("r", 30)
+    })
+    .on("mouseleave", function(d) {
+        node.transition().duration(100).attr("r", 25);
+        is_connected(d, 1);
+    });  
+
+</script>
+
+</body>
+</html>

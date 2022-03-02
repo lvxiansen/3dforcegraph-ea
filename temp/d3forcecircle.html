@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+<script src="d3.v3.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  
+  <style>
+  line.node-link, path.node-link {
+    fill: none;
+    stroke: black
+  }
+  circle.node {
+    fill: white;
+    stroke: black
+  }
+  circle.node+text {
+    text-anchor: middle;
+  }
+  text {
+    font-family: sans-serif;
+    pointer-events: none;
+  }
+    
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+// number of random nodes (gets crowded at >25 unless you change node diameter)
+// 随机节点数（除非更改节点直径，否则在>25时会变得拥挤）
+var num = 20;
+
+// returns random int between 0 and num
+// 返回0到num之间的随机整数
+function getRandomInt() {return Math.floor(Math.random() * (num));}
+
+// nodes returns a [list] of {id: 1, fixed:true}
+// 返回一个{id:1.fixed:true的列表}
+// var nodes = d3.range(num).map(d => ({id: d}) );
+var nodes = d3.range(num).map(function(d) { return {id: d}; });
+
+// links returns a [list] of {source: 0, target: 1} (values refer to indicies of nodes)
+// var links = d3.range(num).map(function(d) { return {source: getRandomInt(), target: getRandomInt()}; });
+var links = d3.range(num).map( d => ({source:getRandomInt(),target:getRandomInt()}) )
+
+var width = 500,
+    height = 500;
+
+// 初始化函数从v3的d3.layout.force()变成v4的d3.forceSimulation()
+/**
+    this.force = d3.forceSimulation().alphaDecay(0.1) // 设置alpha衰减系数
+        .force("link", d3.forceLink().distance(100)) // distance为连线的距离设置
+        .force('collide', d3.forceCollide().radius(() => 30)) // collide 为节点指定一个radius区域来防止节点重叠。
+        .force("charge", d3.forceManyBody().strength(-400))  // 节点间的作用力
+    为布局添加点和线
+    this.force.nodes(nodes)   // 节点数据
+          .force('link', d3.forceLink(links).distance(150));  // 连线数据 distance为连线的距离设置
+          .alpha(1);  // 设置alpha值，让里导向图有初始动力
+          .restart();   // 启动仿真计时器
+    由于在v4版本中nodes的x、y坐标和加速度vx、vy只在nodes中计算一次，所有在变成有节点或连线增加的时候，必须重新执行一次force.nodes(nodes)和force('link', d3.forceLink(links))，初始化节点的数据结构。
+    如果在v3版本中，只需在布局初始化时执行即可，在d3会在每次force.start()方法执行时重新初始化一次节点和连线的数据结构，
+    这是一个特别需要注意的地方，另外在v4版本中start方法被遗弃，需使用restart方法。
+*/
+var force = d3.layout.force()
+    .nodes(nodes)
+    .links(links)
+    /*
+    用于设定力学图的作用范围，使用方法为 force.size( [ x , y ] )，这个函数用于指定两件事：
+    重力的重心位置为 ( x/2 , y/2 )
+    所有节点的初始位置限定为 [ 0 , x ] 和 [ 0 , y ] 之间（但并非之后也是如此）
+    如果不指定，默认为 [ 1 , 1 ] 。
+    */
+    .size([width, height]);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// invisible circle for placing nodes 用于放置节点的不可见圆
+// it's actually two arcs so we can use the getPointAtLength() and getTotalLength() methods
+// 它实际上是两个圆弧，所以我们可以使用getPointAtLength（）和getTotalLength（）方法
+
+/*
+    d属性定义了一个路径。d实际上是一个字符串，包含了一系列路径描述。这些路径由下面这些指令组成。
+        这些组合在一个字符串中。这些不同的命令是大小写敏感的；一个大写的命令指明它的参数是绝对位置，而小写的命令指明相对于当前位置的点。
+        可以指定一个负数值作为命令的参数：负角度将是逆时针的，绝对x和y位置将视为负坐标。负相对x值将会往左移，而负相对y值将会向上移。
+    Moveto：
+        Moveto指令可以被想象成拎起绘图笔，落脚到另一处。在上一个点和这个指定点之间没有线段绘制
+        M x,y 在这里x和y是绝对坐标，分别代表水平坐标和垂直坐标。m dx,dy 在这里dx和dy是相对于当前点的距离，分别是向右和向下的距离。
+    Arcto：
+        椭圆弧曲线是定义为椭圆的一部分的曲线。
+        绘制一条从当前点到坐标为当前点沿 x 轴偏移 dx 和沿 y 轴偏移 dy 的点的 Arc 曲线
+        a rx ry angle large-arc-flag sweep-flag dx dy
+        rx 和 ry 是椭圆的两个半径,angle 表示椭圆相对于 x 轴的旋转（以度为单位）
+        large-arc-flag 和 sweep-flag 允许选择必须绘制的弧，因为可以从其他参数中绘制 4 种可能的弧
+            large-arc-flag 允许选择大弧 (1) 或小弧 (0)，
+            sweep-flag 允许选择顺时针弧 (1) 或逆时针弧 (0)
+        当前点的 X 和 Y 坐标移动了 dx 和 dy 以用于下一个命令。所有后续的参数集都被认为是隐含的相对弧曲线 (a) 命令
+
+    M，前面已经提到过，它需要两个参数，分别是需要移动到的点的x轴和y轴的坐标。
+    假设，你的画笔当前位于一个点，在使用M命令移动画笔后，只会移动画笔，但不会在两点之间画线。
+    因为M命令仅仅是移动画笔，但不画线。所以M命令经常出现在路径的开始处，用来指明从何处开始画。
+*/
+var dim = width-80
+var circle = svg.append("path")
+    // M 40, 250 a 210,210 0 1,0 420,0 a 210,210 0 1,0 -420,0
+    //  .attr("d", "M 40, "+(dim/2+40))
+    // 先逆时针画半圆，之后顺时针画半圆，顺时针的半圆相当于.attr("d", "M 40+420, 250+0 a 210,210 0 1,0 -420,0" )
+    .attr("d", "M 40, "+(dim/2+40)+" a "+dim/2+","+dim/2+" 0 1,0 "+dim+",0 a "+dim/2+","+dim/2+" 0 1,0 "+dim*-1+",0")
+    .style("fill", "#f5f5f5");
+
+// evenly spaces nodes along arc 沿圆弧均匀地隔开节点
+// getTotalLength 该方法返回用户代理对路径总长度(以用户单位为单位)的计算值
+// getPointAtLength  该方法返回路径上指定距离的点的坐标(路径上给定距离处的点)
+var circleCoord = function(node, index, num_nodes){
+    // getTotalLength() 在节点上工作，但 path 是 D3 选择，而不是 DOM 元素本身。所以，你必须使用 path.node()
+    var circumference = circle.node().getTotalLength();
+    var pointAtLength = function(l){return circle.node().getPointAtLength(l)};
+    var sectionLength = (circumference)/num_nodes;
+    var position = sectionLength*index+sectionLength/2;
+    return pointAtLength(circumference-position)
+}
+
+// fades out lines that aren't connected to node d 淡出未连接到节点d的线
+// stroke-opacity属性指定了当前对象的轮廓的不透明度。它的默认值是1。
+var is_connected = function(d, opacity) {
+    lines.transition().style("stroke-opacity", function(o) {
+        return o.source === d || o.target === d ? 1 : opacity;
+    });
+}
+
+force.start();
+
+// set coordinates for container nodes
+// 设置容器节点的坐标
+nodes.forEach(function(n, i) {
+    var coord = circleCoord(n, i, nodes.length)
+    n.x = coord.x
+    n.y = coord.y
+});
+
+// use this one for straight line links...
+var lines = svg.selectAll("line.node-link")
+  .data(links).enter().append("line")
+    .attr("class", "node-link")
+  .attr("x1", function(d) { return d.source.x; })
+  .attr("y1", function(d) { return d.source.y; })
+  .attr("x2", function(d) { return d.target.x; })
+  .attr("y2", function(d) { return d.target.y; });
+
+// ...or use this one for curved line links
+// var lines = svg.selectAll("path.node-link")
+//     .data(links).enter().append("path")
+//     .attr("class", "node-link")
+//     .attr("d", function(d) {
+//         var dx = d.target.x - d.source.x,
+//             dy = d.target.y - d.source.y,
+//             dr = Math.sqrt(dx * dx + dy * dy);
+//         return "M" + 
+//             d.source.x + "," + 
+//             d.source.y + "A" + 
+//             dr + "," + dr + " 0 0,1 " + 
+//             d.target.x + "," + 
+//             d.target.y;
+//     });
+
+/*
+    svg.selectAll('g.gnode') 选择所有g下的gnode类
+    .data(nodes) 绑定数组
+    .enter() //指定选择集的enter部分  有数据，而没有足够图形元素的时候，使用此方法可以添加足够的元素。
+    .append('g')  // 添加足够数量的矩形元素
+    为什么在前面没有看到g.gnode?因为这里enter发现没有图形元素就直接添加了
+*/
+var gnodes = svg.selectAll('g.gnode')
+    .data(nodes).enter().append('g')
+    .attr("transform", function(d) {
+        console.log(d.x,d.y)
+        //这里为什么是transhlate?
+        //因为求出的坐标是相对于整个页面的坐标，所以需要将各个节点放到相应的位置上去
+        return "translate("+d.x+","+d.y+")"
+    })
+    .classed('gnode', true);
+
+var node = gnodes.append("circle")
+    .attr("r", 25)
+    .attr("class", "node")
+    .on("mouseenter", function(d) {
+        is_connected(d, 0.1)
+        node.transition().duration(100).attr("r", 25)
+        d3.select(this).transition().duration(100).attr("r", 30)
+    })
+    .on("mouseleave", function(d) {
+        node.transition().duration(100).attr("r", 25);
+        is_connected(d, 1);
+    });  
+
+//x并且y是绝对坐标，dx并且dy是相对坐标（相对于指定的x和y） dy不能使用css指定
+var labels = gnodes.append("text")
+    .attr("dy", 4)
+    .text(function(d){return d.id})
+</script>
+
+</body>
+</html>

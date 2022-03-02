@@ -1,0 +1,88 @@
+<head>
+    <style> body { margin: 0; } </style>
+  
+    <!-- 这个模块提供了一个针对分隔符文件/字符串的解析和格式化工具 -->
+    <script src="//unpkg.com/d3-dsv"></script>
+    <!-- dat.GUI 是一个轻量级的图形用户界面库,用于在 JavaScript 中更改变量的轻量级图形用户界面（GUI 组件），
+      使用这个库可以很容易地创建出能够改变代码变量的界面组件。 -->
+    <script src="//unpkg.com/dat.gui"></script>
+    <!-- D3 的Quadtree四叉树的移植版本，通过添加 z 坐标与三维数据结构一起使用。 -->
+    <!-- 八叉树递归地将三维空间划分为立方体，将每个立方体划分为八个大小相同的立方体。
+      每个不同的点都存在于一个唯一的叶节点中；重合点由链表表示。
+      八叉树可以加速各种空间操作，例如用于计算多体力、碰撞检测和搜索附近点的Barnes-Hut 近似 -->
+    <script src="//unpkg.com/d3-octree"></script>
+    <!-- d3-force 的扩展版本，通过方法 numDimensions 支持除 2D 之外的其他维度，支持值 1、2 或 3 -->
+    <script src="//unpkg.com/d3-force-3d"></script>
+    
+    <script src="//unpkg.com/3d-force-graph"></script>
+    <!--<script src="../../dist/3d-force-graph.js"></script>-->
+  </head>
+  
+  <body>
+    <div id="graph"></div>
+  
+    <script>
+      // controls
+      const controls = { 'DAG Orientation': 'td'};
+      const gui = new dat.GUI();
+      // td (top-down), bu (bottom-up), lr (left-to-right), rl (right-to-left), zout (near-to-far), zin (far-to-near), radialout (outwards-radially) .
+      gui.add(controls, 'DAG Orientation', ['td', 'bu', 'lr', 'rl', 'zout', 'zin', 'radialout', 'radialin', null])
+        .onChange(orientation => graph && graph.dagMode(orientation));
+  
+      // graph config
+      const NODE_REL_SIZE = 1;
+      const graph = ForceGraph3D()
+      // 基于图形方向性应用布局约束。仅适用于 DAG 图结构（无循环）。
+      // 在 td（自上而下）、bu（自下而上）、lr（从左到右）、rl（从右到左）、zout（从近到远）、zin（从远到近）之间进行选择)、radialout（向外径向）或radialin（向内径向）。
+        .dagMode('td')
+        //如果使用 dagMode，则指定不同图形深度之间的距离
+        .dagLevelDistance(100)
+        .backgroundColor('#101020')
+        .linkColor(() => 'rgba(255,255,255,0.2)')
+        .nodeRelSize(NODE_REL_SIZE)
+        .nodeId('path')
+        .nodeVal('size')
+        .nodeLabel('path')
+        .nodeAutoColorBy('module')
+        .nodeOpacity(0.9)
+        .linkDirectionalParticles(2)
+        .linkDirectionalParticleWidth(0.8)
+        .linkDirectionalParticleSpeed(0.006)
+        .d3Force('collision', d3.forceCollide(node => Math.cbrt(node.size) * NODE_REL_SIZE))
+        .d3VelocityDecay(0.3);
+  
+      // Decrease repel intensity
+      graph.d3Force('charge').strength(-15);
+  
+      fetch('./d3-dependencies.csv')
+        .then(r => r.text())
+        .then(d3.csvParse)
+        .then(data => {
+          const nodes = [], links = [];
+          data.forEach(({ size, path }) => {
+            const levels = path.split('/'),
+              level = levels.length - 1,
+              module = level > 0 ? levels[1] : null,
+              leaf = levels.pop(),
+              parent = levels.join('/');
+  
+            const node = {
+              path,
+              leaf,
+              module,
+              size: +size || 20,
+              level
+            };
+  
+            nodes.push(node);
+  
+            if (parent) {
+              links.push({source: parent, target: path, targetNode: node});
+            }
+          });
+  
+          graph(document.getElementById('graph'))
+            .graphData({ nodes, links });
+        });
+    </script>
+  </body>
