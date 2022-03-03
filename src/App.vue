@@ -56,7 +56,7 @@ export default {
         .onNodeHover(
           (node) => this.$refs.graph.style.cursor = node ? "pointer" : null
          ) // 鼠标滑到节点上改变指针   cursor 属性设置或返回鼠标指针显示的光标类型。 pointer光标呈现为指示链接的指针（一只手）。
-        .onNodeClick((Node) => {
+        .onNodeClick((node) => {
           // 点击节点事件（视角转移到该节点）
           // Aim at node from outside it
           const distance = 400;
