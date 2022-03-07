@@ -1,5 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
+// import China169 from "./index.vue";
 // Vue.config 是一个对象，包含 Vue 的全局配置，vue.config的配置全部在在main.js中设置的
 // productionTip设置为 false 以阻止 vue 在启动时生成生产提示
 Vue.config.productionTip = false;

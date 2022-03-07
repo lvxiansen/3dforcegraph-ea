@@ -8,8 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "3d-force-graph": "1.70.2",
     "@vue/cli-plugin-babel": "4.1.1",
+    "3d-force-graph": "1.70.2",
+    "d3": "^7.3.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -18,12 +19,13 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.0.1",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
-    "root": true,
+    "root": false,
     "env": {
-      "node": true
+      "node": false
     },
     "extends": [
       "plugin:vue/essential",

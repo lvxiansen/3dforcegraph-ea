@@ -9,6 +9,7 @@
 <script>
 import ForceGraph3D from "3d-force-graph";
 import * as THREE from 'three'
+import * as d3 from 'd3';
 
 // import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer'
 // import { CSS3DObject, CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer'
@@ -41,7 +42,6 @@ export default {
   methods: {
     async initGraph() {
       const elem = document.getElementById('graph')
-
       //ForceGraph3d({ configOptions })(<domElement>)  domElement是html中的节点
       //作者的意思是先初始化图不加载数据，之后再进行Data input操作
       /**------------------------------------------- Initialisation 初始化 -------------------------------------------  */
@@ -59,12 +59,12 @@ export default {
         .showNavInfo(false) // 是否显示底部导航提示信息
         .nodeId('id')
         /*------------------------------------------- Node styling  节点配置 -------------------------------------------*/
-        .nodeRelSize(10) // 节点大小（支持数值）
+        .nodeRelSize(5) // 节点大小（支持数值）
         .nodeVal((node) => node.size * 0.05) // 节点大小（支持回调）节点对象访问器函数、属性或节点数值的数字常量
         .nodeAutoColorBy("id") // 节点颜色：根据属性划分（参数为graphData({nodes: nodes, links: links})）中nodes中每个node中的属性名称）
         .nodeAutoColorBy((node) => node.id) // 节点颜色：回调函数处理（功能同上）
         .nodeOpacity(1) // 节点透明度：回调函数处理（根据label划分）
-        .nodeLabel((node) => node.name + "<br>" + JSON.stringify(node.labels)) // 节点标签显示内容（鼠标滑到节点显示，也可以使用回调函数）
+        .nodeLabel((node) => node.name + "<br>" + node.id) // 节点标签显示内容（鼠标滑到节点显示，也可以使用回调函数）
         /*------------------------------------------- Interaction 相互作用 -------------------------------------------*/
         .onNodeHover(
           (node) => this.$refs.graph.style.cursor = node ? "pointer" : null
@@ -72,32 +72,34 @@ export default {
         .onNodeClick((node) => {
           // 点击节点事件（视角转移到该节点）
           // Aim at node from outside it
-          // console.log(node.fx,node.fy,node.fz)
-          const distance = 400;
-          //Math.hypot() 函数返回其参数的平方和的平方根
-          const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
-          this.graph.cameraPosition(
-            {
-              x: node.x * distRatio,
-              y: node.y * distRatio,
-              z: node.z * distRatio,
-            }, // new position
-            node, // lookAt ({ x, y, z })
-            3000 // ms transition duration)
-          );
+          console.log("width:",this.$refs.graph.parentElement.offsetWidth/2)
+          console.log("height:",(this.$refs.graph.parentElement.offsetHeight + 150)/2)
+          console.log(node.fx,node.fy,node.fz)
+          // const distance = 400;
+          // //Math.hypot() 函数返回其参数的平方和的平方根
+          // const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
+          // this.graph.cameraPosition(
+          //   {
+          //     x: node.x * distRatio,
+          //     y: node.y * distRatio,
+          //     z: node.z * distRatio,
+          //   }, // new position
+          //   node, // lookAt ({ x, y, z })
+          //   3000 // ms transition duration)
+          // );
         })
         /*------------------------------------------- Link styling 边的配置 -------------------------------------------*/
         .linkVisibility(true) // 是否显示边
         .linkLabel((r) => r.type) // 边的标签显示（鼠标滑到边上显示）
-        .linkDirectionalArrowLength(1) // 边的指向箭头长度
-        .linkDirectionalArrowRelPos(1) // 边的标签显示（鼠标滑到边上显示）
-        .linkCurvature(1) // 边的透明度
-        .linkDirectionalParticles(1) // 边粒子：数量
-        .linkDirectionalParticleSpeed(1) // 边粒子：移动速度
-        .linkDirectionalParticleWidth(0.3) // 边粒子：大小
+        .linkDirectionalArrowLength(0.8) // 箭头直接显示在链接线上
+        .linkDirectionalArrowRelPos(0.5) // 用于箭头沿链路线的纵向位置.0指示紧邻源节点，1指向目标节点，1表示在中间
+        .linkCurvature(0) // 曲线表示为3D贝塞尔曲线，任何数值都可以接受。值为0表示一条直线。
+        .linkDirectionalParticles(2) // 边粒子：数量
+        .linkDirectionalParticleSpeed(0.006) // 边粒子：移动速度
+        .linkDirectionalParticleWidth(2) // 边粒子：大小
         .linkColor(() => "RGB(170,170,170)") // 边颜色
         .linkAutoColorBy((r) => r.source) // 边颜色自动化分
-        .linkOpacity(0.9)
+        .linkOpacity(0.9) //不透明度
         .linkSource('source')
         .linkTarget('target')
         /*------------------------------------------- Render control 渲染控制 -------------------------------------------*/
@@ -123,6 +125,30 @@ export default {
          /*------------------------------------------- Utility 实用方法 -----------------------------*/
       })
     },
+    /*
+      index - 将节点的从零开始的索引转换为节点
+      x - 节点的当前x位置
+      y - 节点的当前y位置（如果使用2个或更多维度）
+      z - 节点的当前z位置（如果使用三维）
+      vx - 节点的当前x速度
+      vy - 节点的当前y速度（如果使用2个或更多维度）
+      vz - 节点的当前z速度（如果使用三维）
+      位置⟨x[，y[，z]]⟩ 和速度⟨vx[，vy[，vz]]⟩ 随后可通过力和模拟进行修改
+      要将节点固定在给定位置，可以指定三个附加属性:
+      fx-节点的固定x位置(fixed)
+      fy-节点的固定y位置
+      fz-节点的固定z位置
+      
+      在每个刻度结束时，在施加任何力后，
+      具有定义 node.fx 的节点将 node.x 重置为此值，并将 node.vx 设置为零
+
+      如果修改了指定的节点数组，例如在模拟中添加或删除节点时，
+      必须使用新的（或更改的）数组再次调用此方法，以通知模拟和绑定力更改；
+      模拟不会对指定的数组进行防御性复制
+
+      也就是说setNodeXYZ中这个fx只是在鼠标拖动后起作用，而不是去计算初始化位置
+      但是formatGraphData中是计算了位置并使用fx修改
+    */
     setNodeXYZ(node) {
       node.fx = node.x
       node.fy = node.y
@@ -133,15 +159,34 @@ export default {
       var data = {}
       data.nodes = []
       data.links = []
-      var templength = temp.nodes.length
-      var tempwidth = this.$refs.graph.parentElement.offsetWidth/2
-      var tempheight = (this.$refs.graph.parentElement.offsetHeight + 150)/2
-      temp.nodes.forEach(element => {
-          element.fx = tempwidth/templength/8+element.id
-          element.fy = tempheight/templength/8+element.id
-          element.fz = tempwidth/templength/8+element.id
+      var datalength = temp.nodes.length
+      var canvaswidth = this.$refs.graph.parentElement.offsetWidth/2
+      var canvasheight = (this.$refs.graph.parentElement.offsetHeight + 150)/2
+      console.log(canvaswidth)
+      console.log(canvasheight)
+      var scale = d3.scaleLinear().domain([0,datalength/2]).range([0, 2 * Math.PI])
+      var bscale = d3.scaleLinear().domain([0,datalength/2]).range([0, 2 * Math.PI])
+      // var ty = d3.scaleLinear().domain([10,100]).range([-20,20])
+      // var tz = d3.scaleLinear().domain([10,120]).range([0,100])
+      // var btz = d3.scaleLinear().domain([210,320]).range([-100,0])
+      temp.nodes.forEach((element,i) => {
+        var theta  = scale(i);
+        var btheta  = bscale(i);
+        var radial = canvaswidth
+        if (element.id < 200) {
+          element.fx = radial * Math.cos(theta)/Math.PI + canvaswidth/3
+          element.fy = radial * Math.sin(theta)/Math.PI - canvasheight/3
+          // element.fz = tz(element.id)
+          // element.fz = tempwidth/templength/8+element.id
+          element.fz = 70
+        } else {
+          element.fx = radial * Math.cos(btheta)/Math.PI - canvaswidth/2
+          element.fy = radial * Math.sin(btheta)/Math.PI - canvasheight/3
+          // element.fz = btz(element.id)        
+          element.fz = -70
+        }
       });
-      console.log(temp.nodes)
+      // console.log(temp.nodes)
       return temp
     },
     drawGraph() {
@@ -150,22 +195,66 @@ export default {
         { id: 20, name: "孙亚芳", labels: ["Any", "人员"], mysqlId: "" },
         { id: 30, name: "王剑锋", labels: ["Any", "人员"], mysqlId: "" },
         { id: 40, name: "张宇昕", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 50, name: "张宇", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 60, name: "张", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 70, name: "张宇昕s", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 80, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 90, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 100, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 110, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 120, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        
+        {id: 210,name: "华为",labels: ["Any", "公司"],mysqlId: "17403742",},
+        { id: 220, name: "孙亚芳", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 230, name: "王剑锋", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 240, name: "张宇昕", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 250, name: "张宇", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 260, name: "张", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 270, name: "张宇昕s", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 280, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 290, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 300, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 310, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
+        { id: 320, name: "张宇昕a", labels: ["Any", "人员"], mysqlId: "" },
       ];
       this.data.links = [
-        {source: 20,target: 10,type: "任职关系",property: "董事长,1998-01-01",},
-        {source: 30,target: 10,type: "任职关系",property: "总经理",},
-        {source: 40,target: 10,type: "任职关系",property: "CTO",},
+        {source: 10,target: 20,type: "任职关系",property: "董事长,1998-01-01",},
+        {source: 20,target: 30,type: "任职关系",property: "总经理",},
+        {source: 30,target: 40,type: "任职关系",property:    "CTO",},
+        {source: 40,target: 50,type: "任职关系",property:    "CTO",},
+        {source: 50,target: 60,type: "任职关系",property:    "CTO",},
+        {source: 60,target: 70,type: "任职关系",property:    "CTO",},
+        {source: 70,target: 80,type: "任职关系",property:    "CTO",},
+        {source: 80,target: 90,type: "任职关系",property:    "CTO",},
+        {source: 90,target: 100,type: "任职关系",property:    "CTO",},
+        {source: 100,target: 110,type: "任职关系",property:    "CTO",},
+        {source: 110,target: 120,type: "任职关系",property:    "CTO",},
+        {source: 120,target: 10,type: "任职关系",property:    "CTO",},
+        
+        {source: 210,target: 220,type: "任职关系",property: "董事长,1998-01-01",},
+        {source: 220,target: 230,type: "任职关系",property: "总经理",},
+        {source: 230,target: 240,type: "任职关系",property:    "CTO",},
+        {source: 240,target: 250,type: "任职关系",property:    "CTO",},
+        {source: 250,target: 260,type: "任职关系",property:    "CTO",},
+        {source: 260,target: 270,type: "任职关系",property:    "CTO",},
+        {source: 270,target: 280,type: "任职关系",property:    "CTO",},
+        {source: 280,target: 290,type: "任职关系",property:    "CTO",},
+        {source: 290,target: 300,type: "任职关系",property:    "CTO",},
+        {source: 300,target: 310,type: "任职关系",property:    "CTO",},
+        {source: 110,target: 320,type: "任职关系",property:    "CTO",},
+        {source: 120,target: 210,type: "任职关系",property:    "CTO",},
+        
+        {source: 40,target: 250,type: "任职关系",property:    "CTO",},
+        {source: 50,target: 260,type: "任职关系",property:    "CTO",},
+        {source: 60,target: 270,type: "任职关系",property:    "CTO",},
+        {source: 70,target: 280,type: "任职关系",property:    "CTO",},  
+        {source: 80,target: 290,type: "任职关系",property:    "CTO",},
+        {source: 90,target: 300,type: "任职关系",property:    "CTO",},
+        {source: 100,target: 310,type: "任职关系",property:    "CTO",},
+        {source: 110,target: 320,type: "任职关系",property:    "CTO",},
+  
       ];
       return this.data
-      // this.data.nodes.forEach((v,_,a)=>{
-      //   temp = {}
-      //   temp = this.data
-      //   this.data.node.fx = v.id+100
-      //   this.data.node.fy = v.id+100
-      //   this.data.node.fz = v.id+100
-      //   console.log(this.data.nodes)
-      // })
-      // this.graph.graphData(this.data);
     },
   },
 };

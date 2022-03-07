@@ -10,10 +10,10 @@
     <!-- 八叉树递归地将三维空间划分为立方体，将每个立方体划分为八个大小相同的立方体。
       每个不同的点都存在于一个唯一的叶节点中；重合点由链表表示。
       八叉树可以加速各种空间操作，例如用于计算多体力、碰撞检测和搜索附近点的Barnes-Hut 近似 -->
-    <script src="//unpkg.com/d3-octree"></script>
+    <!-- <script src="//unpkg.com/d3-octree"></script> -->
     <!-- d3-force 的扩展版本，通过方法 numDimensions 支持除 2D 之外的其他维度，支持值 1、2 或 3 -->
-    <script src="//unpkg.com/d3-force-3d"></script>
-    
+    <!-- <script src="//unpkg.com/d3-force-3d"></script> -->
+  
     <script src="//unpkg.com/3d-force-graph"></script>
     <!--<script src="../../dist/3d-force-graph.js"></script>-->
   </head>
@@ -48,7 +48,7 @@
         .linkDirectionalParticles(2)
         .linkDirectionalParticleWidth(0.8)
         .linkDirectionalParticleSpeed(0.006)
-        .d3Force('collision', d3.forceCollide(node => Math.cbrt(node.size) * NODE_REL_SIZE))
+        //.d3Force('collision', d3.forceCollide(node => Math.cbrt(node.size) * NODE_REL_SIZE))
         .d3VelocityDecay(0.3);
   
       // Decrease repel intensity
