@@ -10,6 +10,7 @@
 import ForceGraph3D from "3d-force-graph";
 import * as THREE from 'three'
 import * as d3 from 'd3';
+import graphjson from './assets/miserables.json'
 
 // import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer'
 // import { CSS3DObject, CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer'
@@ -28,6 +29,7 @@ export default {
         links : [],
       },
       graph: null,
+      graphjson:{}
   }
   },
   // 类型：Function  实例被挂载后调用，这时 el 被新创建的 vm.$el 替换了。如果根实例挂载到了一个文档内的元素上，当 mounted 被调用时 vm.$el 也在文档内
@@ -45,7 +47,8 @@ export default {
       //ForceGraph3d({ configOptions })(<domElement>)  domElement是html中的节点
       //作者的意思是先初始化图不加载数据，之后再进行Data input操作
       /**------------------------------------------- Initialisation 初始化 -------------------------------------------  */
-      await this.formatGraphData().then(data => {
+      await this.jsonformatGraphData().then(data => {
+        console.log(data.nodes[0])
         this.graph = ForceGraph3D({
           controlType: "trackball", // orbit沿2d轨迹绕着拖动，fly 固定不动  trackball 轨迹球
           rendererConfig: { antialias: true, alpha: true },//要传递给 ThreeJS WebGLRenderer 构造函数的配置参数 antialias抗锯齿 
@@ -64,7 +67,7 @@ export default {
         .nodeAutoColorBy("id") // 节点颜色：根据属性划分（参数为graphData({nodes: nodes, links: links})）中nodes中每个node中的属性名称）
         .nodeAutoColorBy((node) => node.id) // 节点颜色：回调函数处理（功能同上）
         .nodeOpacity(1) // 节点透明度：回调函数处理（根据label划分）
-        .nodeLabel((node) => node.name + "<br>" + node.id) // 节点标签显示内容（鼠标滑到节点显示，也可以使用回调函数）
+        .nodeLabel((node) => node.id + "<br>" + node.group) // 节点标签显示内容（鼠标滑到节点显示，也可以使用回调函数）
         /*------------------------------------------- Interaction 相互作用 -------------------------------------------*/
         .onNodeHover(
           (node) => this.$refs.graph.style.cursor = node ? "pointer" : null
@@ -154,16 +157,82 @@ export default {
       node.fy = node.y
       node.fz = node.z
     },
+    async jsonformatGraphData() {
+      // this.graphjson = graphjson
+      const graphData = {}
+      graphData.nodes = []
+      graphData.links = []
+      // console.log(graphjson.nodes)
+      Object.keys(graphjson.nodes).map(item => (
+        graphData.nodes.push(graphjson.nodes[item])
+      ))
+      Object.keys(graphjson.links).map(item => (
+        graphData.links.push(graphjson.links[item])
+      ))
+      graphData.nodes.sort(function(a, b) {
+        return a.group - b.group;
+      });
+      // var datalength = graphData.nodes.length
+      var canvaswidth = this.$refs.graph.parentElement.offsetWidth/2
+      var canvasheight = (this.$refs.graph.parentElement.offsetHeight + 150)/2
+      // 计算各平面数量
+      var aPlaneNodeNumbers = 0
+      var bPlaneNodeNumbers = 0
+      graphData.nodes.forEach(function(elem) {
+        // console.log(elem.class)
+        if (elem.class == 1) {
+          aPlaneNodeNumbers  = aPlaneNodeNumbers+1
+        } else {
+          bPlaneNodeNumbers = bPlaneNodeNumbers+1
+        }
+      })
+      var aPlaneNode = []
+      var bPlaneNode = []
+      graphData.nodes.forEach(elem=>{
+        if (elem.class == 1) {
+          aPlaneNode.push(elem.id)
+        } else {
+          bPlaneNode.push(elem.id)
+        }
+      })
+      console.log(bPlaneNode)
+      var ascale = d3.scaleBand().domain(aPlaneNode).range([0, 2 * Math.PI])
+      var bscale = d3.scaleBand().domain(bPlaneNode).range([0, 2 * Math.PI])
+ 
+      // var ascale = d3.scaleLinear().domain([0,aPlaneNodeNumbers]).range([0, 2 * Math.PI])
+      // var bscale = d3.scaleLinear().domain([0,bPlaneNodeNumbers]).range([0, 2 * Math.PI])
+      graphData.nodes.forEach((element) => {
+        var radial = canvaswidth
+        if (element.class == 1) {
+          var theta  = ascale(element.id);
+          // console.log(element.name,theta)
+          element.fx = radial * Math.cos(theta)/Math.PI + canvaswidth/3
+          element.fy = radial * Math.sin(theta)/Math.PI + canvasheight/3
+          // element.fz = tz(element.id)
+          // element.fz = tempwidth/templength/8+element.id
+          element.fz = 70
+        } else {
+          var btheta  = bscale(element.id);
+          console.log(element.name,btheta)
+          element.fx = radial * Math.cos(btheta)/Math.PI - canvaswidth/3
+          element.fy = radial * Math.sin(btheta)/Math.PI - canvasheight/3
+          // element.fz = btz(element.id)        
+          element.fz = -70
+        }
+      });
+      // console.log(temp.nodes)
+      return graphData
+    },
     async formatGraphData() {
       var temp = this.drawGraph()
       var data = {}
       data.nodes = []
       data.links = []
+      //计算画布面积
       var datalength = temp.nodes.length
       var canvaswidth = this.$refs.graph.parentElement.offsetWidth/2
       var canvasheight = (this.$refs.graph.parentElement.offsetHeight + 150)/2
-      console.log(canvaswidth)
-      console.log(canvasheight)
+
       var scale = d3.scaleLinear().domain([0,datalength/2]).range([0, 2 * Math.PI])
       var bscale = d3.scaleLinear().domain([0,datalength/2]).range([0, 2 * Math.PI])
       // var ty = d3.scaleLinear().domain([10,100]).range([-20,20])
