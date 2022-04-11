@@ -1,40 +1,30 @@
 package main
 
-func maxSubArray(nums []int) int {
-	result := nums[0]
-	prev := nums[0]
-	for i := 1; i < len(nums); i++ {
-		prev = max(prev+nums[i], nums[i])
-		result = max(result, prev)
+import (
+	"fmt"
+	"time"
+)
+
+//无缓冲Channel
+//注意进管道是chan <-,出管道是<- chan
+func producer(out chan<- int) {
+	for i := 0; i < 10; i++ {
+		fmt.Println("生产者生产数据:", i)
+		time.Sleep(time.Millisecond)
+		out <- i
 	}
-
-	return result
+	close(out)
 }
-func max(a, b int) int {
-	if a > b {
-		return a
-	} else {
-		return b
+func consumer(in <-chan int) {
+	for data := range in {
+		fmt.Println("消费者消费数据:", data)
 	}
 }
-
-// func main() {
-// 	var leng int
-// 	for {
-// 		n, _ := fmt.Scan(&leng)
-// 		if n == 0 {
-// 			break
-// 		}
-// 		g := make([]int, 0)
-// 		var temp int
-// 		for i := 0; i < leng; i++ {
-// 			_, _ = fmt.Scanf("%d,", &temp)
-// 			g = append(g, temp)
-// 			fmt.Println(g)
-// 		}
-
-// 		// result := wiggleMaxLength(g)
-// 		// fmt.Println(result)
-// 		// return
-// 	}
-// }
+func main() {
+	//无缓冲channel
+	ch := make(chan int)
+	//有缓冲channle
+	//ch := make(chan int, 5)
+	go producer(ch)
+	consumer(ch)
+}

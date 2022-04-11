@@ -10,3 +10,4 @@ tree.md
 *.idea
 # *.go
 # temp
+.history/
