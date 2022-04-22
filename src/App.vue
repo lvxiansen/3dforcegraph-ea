@@ -343,6 +343,7 @@ export default {
       });
 
       graphData = this.getTopoNodePos(graphData)
+      // console.log(graphData)
       return graphData
 
     },

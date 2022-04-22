@@ -1,15 +1,17 @@
 /*
  * @Author: your name
  * @Date: 2022-03-02 16:02:17
- * @LastEditTime: 2022-04-08 10:47:41
- * @LastEditors: your name
+ * @LastEditTime: 2022-04-20 20:41:43
+ * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \3dforcegraph-ea\src\main.js
  */
 import Vue from "vue";
-// import App from "./App.vue";
+import App from "./App.vue";
 // import Forcelayout from "./dag.vue";
 import Dag from "./dag.vue";
+import Forcelayout from "./Forcelayout.vue";
+import Dagtopo from "./dagtopo.vue";
 // import China169 from "./index.vue";
 
 // Vue.config 是一个对象，包含 Vue 的全局配置，vue.config的配置全部在在main.js中设置的
@@ -64,7 +66,10 @@ Vue.config.productionTip = false;
 //   render: h => h(Forcelayout)
 // }).$mount("#app");
 
-new Vue({
-  render: h => h(Dag)
-}).$mount("#app");
+// new Vue({
+//   render: h => h(Dag)
+// }).$mount("#app");
 
+new Vue({
+  render: h => h(Dagtopo)
+}).$mount("#app");

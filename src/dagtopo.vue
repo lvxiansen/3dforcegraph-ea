@@ -14,8 +14,8 @@ import d3octree from  "d3-octree"
 import * as d3Force3d from  "d3-force-3d"
 import * as THREE from "three";
 // import dataset from './d3-dependencies.csv'
-// import linkJson from "./assets/link.json";
-// import nodeJson from "./assets/node.json";
+import linkJson from "./assets/link_net_type.json";
+import nodeJson from "./assets/node_net_type.json";
 
 
 import * as dat from 'dat.gui';
@@ -24,16 +24,16 @@ import * as dat from 'dat.gui';
 // import { CSS3DObject, CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer'
 export default {
   // 类型：string  限制：只有作为组件选项时起作用 允许组件模板递归地调用自身。注意，组件在全局用 Vue.component() 注册时，全局 ID 自动作为组件的 name
-  name: "Dag",
+  name: "Dagtopo",
   // 类型：Object  包含 Vue 实例可用组件的哈希表
   components: {},
   // 类型：Object | Function  限制：组件的定义只接受 function  Vue 实例的数据对象。Vue 会递归地把 data 的 property 转换为 getter/setter，从而让 data 的 property 能够响应数据变化。
   data() {
     return {
-      data: {
-        nodes: [],
-        links: [],
-      },
+      // data: {
+      //   nodes: [],
+      //   links: [],
+      // },
       graph: null,
       graphjson: {},
     };
@@ -64,16 +64,35 @@ export default {
         .dagLevelDistance(200)
         .backgroundColor('#101020')
         .linkColor(() => 'rgba(255,255,255,0.2)')
+        .nodeId("dev_id")
         .nodeRelSize(1)
-        .nodeId('path')
         .nodeVal(300)
-        .nodeLabel(node=>node.level)
-        .nodeAutoColorBy('module')
+        .onNodeClick((node) => {
+          const distance = 400;
+          //Math.hypot() 函数返回其参数的平方和的平方根
+          const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
+          this.graph.cameraPosition(
+            {
+              x: node.x * distRatio,
+              y: node.y * distRatio,
+              z: node.z * distRatio,
+            }, // new position
+            node, // lookAt ({ x, y, z })
+            3000 // ms transition duration)
+          );
+           })
+        .nodeLabel(node=>node.dev_id + "<br>" + node.depth + "<br>" + node["out"][0])
+        // .nodeAutoColorBy('dev_id')
         .nodeOpacity(0.9)
+        .linkSource('left_dev_id')
+        .linkTarget('right_dev_id')
+        .linkVisibility(true)
         // .nodeResolution(2)
         .linkDirectionalParticles(2)
         .linkDirectionalParticleWidth(0.8)
         .linkDirectionalParticleSpeed(0.006)
+        // .onDagError(node=>false)
+        // .onDagError()
         .d3VelocityDecay(0.3);
         
         //https://www.d3js.org.cn/document/d3-force/#api-reference
@@ -120,46 +139,39 @@ export default {
       });
     },
 
+        //可以考虑将这里拆分为构造graphdata函数和计算位置函数
     async jsonFormatGraphData() {
-        var graphData = {};
+      //构建graphData结构体
+      var graphData = {};
       graphData.nodes = [];
       graphData.links = [];
-      //这里必须放在pubulic里
-      await fetch("/assets/d3-dependencies.csv")
-      .then(r => r.text())
-      .then(d3dsv.csvParse)
-      .then(data => {
-          // console.log(data)
-        data.forEach(({ size, path }) => {
-          const levels = path.split('/'),
-            level = levels.length - 1,
-            module = level > 0 ? levels[1] : null,
-            leaf = levels.pop(),
-            parent = levels.join('/');
-
-          const node = {
-            path,
-            leaf,
-            module,
-            size: +size || 20,
-            level
-          };
-
-          graphData.nodes.push(node);
-
-          if (parent) {
-            graphData.links.push({source: parent, target: path, targetNode: node});
-          }
-        });
-        })
-        // console.log("graphData.length:",graphData.length)
-        // console.log("graphData.nodes.length:",graphData.nodes.length)
-        // console.log("graphData.links.length:",graphData.links.length)
-        // console.log("Start----------------graphData")
-        // console.log(graphData.nodes)
-        
-        return graphData;
-    }
+      var hash = new Map()
+      /**
+       * 存放所有已有的node节点，将其放到hash里，设置其值为1
+       */
+      // console.log(nodeJson.nodes[0].dev_id)
+      Object.keys(nodeJson.nodes).map(function(item) {
+        hash.set(nodeJson.nodes[item].dev_id,1)
+        graphData.nodes.push(nodeJson.nodes[item])
+      }
+      );
+      // console.log(graphData)
+      /**
+       * 遍历每条链路，链路的左右节点都在node节点的hash里，就将这条链路放入links中
+       */
+      Object.keys(linkJson.links).map(function(item) {
+        if (hash.get(linkJson.links[item].left_dev_id) == 1 && hash.get(linkJson.links[item].right_dev_id) == 1)  {
+            graphData.links.push(linkJson.links[item])
+        }
+        // graphData.links.push(linkJson.links[item])
+      });
+      // graphData.nodes.sort(function (a, b) {
+      //   return a.group - b.group;
+      // });
+      // console.log(graphData)
+      console.log(graphData)
+      return graphData
+    },
   }   
 };
 </script>
