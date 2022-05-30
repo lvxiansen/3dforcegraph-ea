@@ -1,0 +1,33 @@
+{"nodes": [
+    {
+      "dev_id": 47,
+      "dev_net": 4,
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.94",
+      "vendor_name": "思科",
+      "prov_aid": 1108,
+      "city_aid": 111066
+    },
+    {
+      "dev_id": 62,
+      "dev_net": 1,
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "186.17.104.246",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111069
+    },
+    {
+      "dev_id": 63,
+      "dev_net": 4,
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.93",
+      "vendor_name": "华为",
+      "prov_aid": 1108,
+      "city_aid": 111066
+    }
+]
+}

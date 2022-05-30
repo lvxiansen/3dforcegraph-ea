@@ -1,0 +1,58 @@
+{
+    "links": [
+      {
+        "left_dev_id": 47,
+        "left_dev_ip": "238.73.180.248",
+        "left_dev_name": "316d5a6e88f13bf356f734f8bdbd730c",
+        "left_prov_aid": 1107,
+        "left_city_aid": 111046,
+        "left_dev_net": 1,
+        "left_dev_type": 16,
+        "left_dev_role": 1,
+        "right_dev_id": 62,
+        "right_dev_ip": "238.73.180.249",
+        "right_dev_name": "9d1a4d4c95c004cf333bf7072c709221",
+        "right_prov_aid": 1107,
+        "right_city_aid": 111046,
+        "right_dev_net": 1,
+        "right_dev_type": 16,
+        "right_dev_role": 1
+      },
+      {
+        "left_dev_id": 47,
+        "left_dev_ip": "186.17.104.246",
+        "left_dev_name": "6e448b01515dabbac30a6c3aa1aaac92",
+        "left_prov_aid": 11010,
+        "left_city_aid": 111069,
+        "left_dev_net": 1,
+        "left_dev_type": 16,
+        "left_dev_role": -1,
+        "right_dev_id": 63,
+        "right_dev_ip": "186.17.104.245",
+        "right_dev_name": "065bc182171b9a33c5afe30676a48341",
+        "right_prov_aid": 11010,
+        "right_city_aid": 111069,
+        "right_dev_net": 1,
+        "right_dev_type": 17,
+        "right_dev_role": -1
+      },
+      {
+        "left_dev_id": 63,
+        "left_dev_ip": "91.158.1.94",
+        "left_dev_name": "7d91232fb9dfdbd570c1bc29b5ae4f42",
+        "left_prov_aid": 1108,
+        "left_city_aid": 111066,
+        "left_dev_net": 4,
+        "left_dev_type": 17,
+        "left_dev_role": -1,
+        "right_dev_id": 62,
+        "right_dev_ip": "91.158.1.92",
+        "right_dev_name": "f5c73b1908cef5148bf534e85051373b",
+        "right_prov_aid": 1108,
+        "right_city_aid": 111064,
+        "right_dev_net": 4,
+        "right_dev_type": 16,
+        "right_dev_role": -1
+      }
+    ]
+}

@@ -1,0 +1,1059 @@
+{
+  "nodes": [
+    {
+      "dev_id": 47,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 62,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 63,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 64,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 96,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 107,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 109,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 180,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 202,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 204,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 235,
+      "dev_net": 4,
+      "dev_type": 17
+    },
+    {
+      "dev_id": 313,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 314,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 361,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 365,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 374,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 400,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 401,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 429,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 474,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 591,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 680,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 684,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 723,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 725,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 787,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 1129,
+      "dev_net": 4,
+      "dev_type": 17
+    },
+    {
+      "dev_id": 1200,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 1208,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 1257,
+      "dev_net": 4,
+      "dev_type": 17
+    },
+    {
+      "dev_id": 1385,
+      "dev_net": 4,
+      "dev_type": 17
+    },
+    {
+      "dev_id": 1536,
+      "dev_net": 4,
+      "dev_type": 17
+    },
+    {
+      "dev_id": 1756,
+      "dev_net": 4,
+      "dev_type": 17
+    },
+    {
+      "dev_id": 1997,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2047,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2050,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2194,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2360,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2473,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2549,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2701,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2758,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 2841,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 2969,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 2994,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3168,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3190,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3213,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3227,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3304,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3416,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3443,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3462,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3463,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3464,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3466,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3467,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3468,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3496,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3500,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3531,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3533,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3535,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3538,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3539,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3540,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3541,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3576,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3615,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3643,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3739,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3757,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3776,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 3840,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3903,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3914,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3919,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3935,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3941,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 3988,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4013,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4031,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4044,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4069,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4360,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4448,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4515,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4561,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4654,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4864,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4872,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 4953,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 5004,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 5013,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 5058,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 5090,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 5171,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 5242,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 6021,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 6671,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 9065,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 9079,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 9753,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 9863,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 10208,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 10699,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 10739,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 11509,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 11513,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 12021,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 12026,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 12076,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 12411,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 12766,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 12783,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 12785,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 13367,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 13370,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 13802,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14186,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14189,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14281,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14283,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14317,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14324,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14452,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14472,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 14599,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 15268,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 15274,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 15412,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 15625,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 15628,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 16356,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 16361,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17045,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17049,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17277,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 17675,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17679,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17805,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 17819,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17986,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 17992,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 18073,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 18122,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 18603,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 18606,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 18946,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 18992,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 19007,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 19582,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 19596,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 19787,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 19788,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 20070,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20071,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20164,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 20341,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20342,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20458,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20459,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20514,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20517,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20691,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 20824,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 21043,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 21055,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 21430,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 21433,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 21832,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 21838,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 22238,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 22240,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 22277,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 22278,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 23436,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 23437,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 23916,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 23918,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 24133,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 24144,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 24450,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 24457,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 24678,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 24679,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 24683,
+      "dev_net": 8,
+      "dev_type": 35
+    },
+    {
+      "dev_id": 25438,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 34827,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 34877,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 35882,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 36036,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 36272,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 36422,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 36539,
+      "dev_net": 4,
+      "dev_type": 16
+    },
+    {
+      "dev_id": 51364,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 56510,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 61634,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 80226,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 80391,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 90646,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 93173,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 98103,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 98263,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 107013,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 109531,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 116850,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 117530,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 131967,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 166936,
+      "dev_net": 1,
+      "dev_type": 4
+    },
+    {
+      "dev_id": 167243,
+      "dev_net": 1,
+      "dev_type": 4
+    }
+  ]
+}

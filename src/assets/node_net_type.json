@@ -3,1057 +3,2112 @@
     {
       "dev_id": 47,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.94",
+      "vendor_name": "思科",
+      "prov_aid": 1108,
+      "city_aid": 111066
     },
     {
       "dev_id": 62,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.104.246",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111069
     },
     {
       "dev_id": 63,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.93",
+      "vendor_name": "华为",
+      "prov_aid": 1108,
+      "city_aid": 111066
     },
     {
       "dev_id": 64,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.104.245",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111069
     },
     {
       "dev_id": 96,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.92",
+      "vendor_name": "华为",
+      "prov_aid": 1108,
+      "city_aid": 111064
     },
     {
       "dev_id": 107,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "43.35.135.58",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111075
     },
     {
       "dev_id": 109,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "43.35.135.59",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111075
     },
     {
       "dev_id": 180,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.91",
+      "vendor_name": "华为",
+      "prov_aid": 1108,
+      "city_aid": 111064
     },
     {
       "dev_id": 202,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.156.12",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110221
     },
     {
       "dev_id": 204,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.156.13",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110221
     },
     {
       "dev_id": 235,
       "dev_net": 4,
-      "dev_type": 17
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.0",
+      "vendor_name": "华为",
+      "prov_aid": 1101,
+      "city_aid": 1101
     },
     {
       "dev_id": 313,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.216.10",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110216
     },
     {
       "dev_id": 314,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.216.11",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110216
     },
     {
       "dev_id": 361,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.80.124",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11010,
+      "city_aid": 111073
     },
     {
       "dev_id": 365,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.20.124.74",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11028,
+      "city_aid": 1110254
     },
     {
       "dev_id": 374,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.20.124.75",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11028,
+      "city_aid": 1110254
     },
     {
       "dev_id": 400,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.171.12",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110366
     },
     {
       "dev_id": 401,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.171.13",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110366
     },
     {
       "dev_id": 429,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "43.34.0.8",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111078
     },
     {
       "dev_id": 474,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.99",
+      "vendor_name": "思科",
+      "prov_aid": 11026,
+      "city_aid": 1110341
     },
     {
       "dev_id": 591,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.100",
+      "vendor_name": "华为",
+      "prov_aid": 11026,
+      "city_aid": 1110317
     },
     {
       "dev_id": 680,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "43.34.0.9",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111078
     },
     {
       "dev_id": 684,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.72.124",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11010,
+      "city_aid": 111072
     },
     {
       "dev_id": 723,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.117.96",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111076
     },
     {
       "dev_id": 725,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.117.97",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111076
     },
     {
       "dev_id": 787,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.208",
+      "vendor_name": "思科",
+      "prov_aid": 11023,
+      "city_aid": 1110220
     },
     {
       "dev_id": 1129,
       "dev_net": 4,
-      "dev_type": 17
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.23",
+      "vendor_name": "华为",
+      "prov_aid": 11022,
+      "city_aid": 11022
     },
     {
       "dev_id": 1200,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.0",
+      "vendor_name": "",
+      "prov_aid": 1101,
+      "city_aid": 1101
     },
     {
       "dev_id": 1208,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.1",
+      "vendor_name": "华为",
+      "prov_aid": 1101,
+      "city_aid": 1101
     },
     {
       "dev_id": 1257,
       "dev_net": 4,
-      "dev_type": 17
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.24",
+      "vendor_name": "思科",
+      "prov_aid": 11022,
+      "city_aid": 11022
     },
     {
       "dev_id": 1385,
       "dev_net": 4,
-      "dev_type": 17
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.39",
+      "vendor_name": "华为",
+      "prov_aid": 1104,
+      "city_aid": 1110323
     },
     {
       "dev_id": 1536,
       "dev_net": 4,
-      "dev_type": 17
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.40",
+      "vendor_name": "思科",
+      "prov_aid": 1104,
+      "city_aid": 1110323
     },
     {
       "dev_id": 1756,
       "dev_net": 4,
-      "dev_type": 17
+      "dev_type": 17,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.56",
+      "vendor_name": "华为",
+      "prov_aid": 1101,
+      "city_aid": 1101
     },
     {
       "dev_id": 1997,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.72",
+      "vendor_name": "思科",
+      "prov_aid": 1105,
+      "city_aid": 1105
     },
     {
       "dev_id": 2047,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.73",
+      "vendor_name": "华为",
+      "prov_aid": 1105,
+      "city_aid": 1105
     },
     {
       "dev_id": 2050,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.75",
+      "vendor_name": "思科",
+      "prov_aid": 11019,
+      "city_aid": 1110187
     },
     {
       "dev_id": 2194,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.76",
+      "vendor_name": "华为",
+      "prov_aid": 11019,
+      "city_aid": 1110183
     },
     {
       "dev_id": 2360,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.82",
+      "vendor_name": "思科",
+      "prov_aid": 11015,
+      "city_aid": 1110139
     },
     {
       "dev_id": 2473,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.84",
+      "vendor_name": "思科",
+      "prov_aid": 11021,
+      "city_aid": 1110325
     },
     {
       "dev_id": 2549,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.87",
+      "vendor_name": "思科",
+      "prov_aid": 11014,
+      "city_aid": 1110128
     },
     {
       "dev_id": 2701,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.88",
+      "vendor_name": "华为",
+      "prov_aid": 11014,
+      "city_aid": 1110119
     },
     {
       "dev_id": 2758,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.239.24",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110222
     },
     {
       "dev_id": 2841,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.95",
+      "vendor_name": "思科",
+      "prov_aid": 11030,
+      "city_aid": 1110308
     },
     {
       "dev_id": 2969,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.17.80.235",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11010,
+      "city_aid": 111073
     },
     {
       "dev_id": 2994,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.96",
+      "vendor_name": "华为",
+      "prov_aid": 11030,
+      "city_aid": 1110305
     },
     {
       "dev_id": 3168,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.11",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111078
     },
     {
       "dev_id": 3190,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.13",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111078
     },
     {
       "dev_id": 3213,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.119",
+      "vendor_name": "思科",
+      "prov_aid": 1103,
+      "city_aid": 1103
     },
     {
       "dev_id": 3227,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.103",
+      "vendor_name": "思科",
+      "prov_aid": 11029,
+      "city_aid": 1110288
     },
     {
       "dev_id": 3304,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.23",
+      "vendor_name": "华为",
+      "prov_aid": 11011,
+      "city_aid": 111095
     },
     {
       "dev_id": 3416,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.25",
+      "vendor_name": "华为",
+      "prov_aid": 11011,
+      "city_aid": 111095
     },
     {
       "dev_id": 3443,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.104",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110277
     },
     {
       "dev_id": 3462,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.167.10",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110217
     },
     {
       "dev_id": 3463,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.167.11",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110217
     },
     {
       "dev_id": 3464,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.199.20",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110215
     },
     {
       "dev_id": 3466,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.199.21",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110215
     },
     {
       "dev_id": 3467,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.247.18",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110373
     },
     {
       "dev_id": 3468,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.247.19",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110373
     },
     {
       "dev_id": 3496,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.199.26",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110215
     },
     {
       "dev_id": 3500,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.199.27",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110215
     },
     {
       "dev_id": 3531,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.152.9",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 3533,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.152.8",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 3535,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.227.18",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110220
     },
     {
       "dev_id": 3538,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.227.19",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110220
     },
     {
       "dev_id": 3539,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.239.25",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110222
     },
     {
       "dev_id": 3540,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.152.26",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 3541,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.3.152.27",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 3576,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.35",
+      "vendor_name": "华为",
+      "prov_aid": 11028,
+      "city_aid": 1110254
     },
     {
       "dev_id": 3615,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.37",
+      "vendor_name": "华为",
+      "prov_aid": 11028,
+      "city_aid": 1110254
     },
     {
       "dev_id": 3643,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.47",
+      "vendor_name": "思科",
+      "prov_aid": 11024,
+      "city_aid": 1110233
     },
     {
       "dev_id": 3739,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.207",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 3757,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.59",
+      "vendor_name": "华为",
+      "prov_aid": 11020,
+      "city_aid": 1110204
     },
     {
       "dev_id": 3776,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "189.138.6.47",
+      "vendor_name": "思科",
+      "prov_aid": 11026,
+      "city_aid": 1110318
     },
     {
       "dev_id": 3840,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.61",
+      "vendor_name": "华为",
+      "prov_aid": 11020,
+      "city_aid": 1110202
     },
     {
       "dev_id": 3903,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.71",
+      "vendor_name": "华为",
+      "prov_aid": 11016,
+      "city_aid": 1110143
     },
     {
       "dev_id": 3914,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.73",
+      "vendor_name": "华为",
+      "prov_aid": 11016,
+      "city_aid": 1110143
     },
     {
       "dev_id": 3919,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.83",
+      "vendor_name": "华为",
+      "prov_aid": 1109,
+      "city_aid": 111068
     },
     {
       "dev_id": 3935,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.85",
+      "vendor_name": "华为",
+      "prov_aid": 1109,
+      "city_aid": 111068
     },
     {
       "dev_id": 3941,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.95",
+      "vendor_name": "华为",
+      "prov_aid": 11027,
+      "city_aid": 1110252
     },
     {
       "dev_id": 3988,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.98",
+      "vendor_name": "华为",
+      "prov_aid": 11027,
+      "city_aid": 1110252
     },
     {
       "dev_id": 4013,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.107",
+      "vendor_name": "华为",
+      "prov_aid": 1102,
+      "city_aid": 11101
     },
     {
       "dev_id": 4031,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.109",
+      "vendor_name": "华为",
+      "prov_aid": 1102,
+      "city_aid": 11101
     },
     {
       "dev_id": 4044,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.121",
+      "vendor_name": "华为",
+      "prov_aid": 1103,
+      "city_aid": 1103
     },
     {
       "dev_id": 4069,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.139",
+      "vendor_name": "思科",
+      "prov_aid": 1106,
+      "city_aid": 111031
     },
     {
       "dev_id": 4360,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.167",
+      "vendor_name": "思科",
+      "prov_aid": 11018,
+      "city_aid": 1110174
     },
     {
       "dev_id": 4448,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.174",
+      "vendor_name": "华为",
+      "prov_aid": 11018,
+      "city_aid": 1110165
     },
     {
       "dev_id": 4515,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.183",
+      "vendor_name": "华为",
+      "prov_aid": 11013,
+      "city_aid": 1110107
     },
     {
       "dev_id": 4561,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.199",
+      "vendor_name": "思科",
+      "prov_aid": 11017,
+      "city_aid": 1110148
     },
     {
       "dev_id": 4654,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.203",
+      "vendor_name": "华为",
+      "prov_aid": 11017,
+      "city_aid": 1110148
     },
     {
       "dev_id": 4864,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.195",
+      "vendor_name": "华为",
+      "prov_aid": 11034,
+      "city_aid": 1110326
     },
     {
       "dev_id": 4872,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.196",
+      "vendor_name": "华为",
+      "prov_aid": 11034,
+      "city_aid": 1110326
     },
     {
       "dev_id": 4953,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.220",
+      "vendor_name": "思科",
+      "prov_aid": 11012,
+      "city_aid": 111097
     },
     {
       "dev_id": 5004,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.231",
+      "vendor_name": "华为",
+      "prov_aid": 11025,
+      "city_aid": 1110347
     },
     {
       "dev_id": 5013,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.232",
+      "vendor_name": "华为",
+      "prov_aid": 11025,
+      "city_aid": 1110347
     },
     {
       "dev_id": 5058,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.243",
+      "vendor_name": "华为",
+      "prov_aid": 1107,
+      "city_aid": 111044
     },
     {
       "dev_id": 5090,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.246",
+      "vendor_name": "华为",
+      "prov_aid": 1107,
+      "city_aid": 111042
     },
     {
       "dev_id": 5171,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.49",
+      "vendor_name": "华为",
+      "prov_aid": 11024,
+      "city_aid": 1110233
     },
     {
       "dev_id": 5242,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.187",
+      "vendor_name": "思科",
+      "prov_aid": 11013,
+      "city_aid": 1110107
     },
     {
       "dev_id": 6021,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.19.229.231",
+      "vendor_name": "华三",
+      "prov_aid": 11024,
+      "city_aid": 1110236
     },
     {
       "dev_id": 6671,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "55.93.222.15",
+      "vendor_name": "华三",
+      "prov_aid": 11024,
+      "city_aid": 1110224
     },
     {
       "dev_id": 9065,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.24",
+      "vendor_name": "华为",
+      "prov_aid": 11022,
+      "city_aid": 11022
     },
     {
       "dev_id": 9079,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.25",
+      "vendor_name": "华为",
+      "prov_aid": 11022,
+      "city_aid": 11022
     },
     {
       "dev_id": 9753,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "251.139.0.29",
+      "vendor_name": "华为",
+      "prov_aid": 11013,
+      "city_aid": 1110107
     },
     {
       "dev_id": 9863,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "251.139.0.30",
+      "vendor_name": "华为",
+      "prov_aid": 11013,
+      "city_aid": 1110107
     },
     {
       "dev_id": 10208,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.240.161.240",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110176
     },
     {
       "dev_id": 10699,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "229.68.216.37",
+      "vendor_name": "迪普科技",
+      "prov_aid": 1106,
+      "city_aid": 111034
     },
     {
       "dev_id": 10739,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "229.68.216.38",
+      "vendor_name": "迪普科技",
+      "prov_aid": 1106,
+      "city_aid": 111034
     },
     {
       "dev_id": 11509,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.37",
+      "vendor_name": "华为",
+      "prov_aid": 11011,
+      "city_aid": 111095
     },
     {
       "dev_id": 11513,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.38",
+      "vendor_name": "华为",
+      "prov_aid": 11011,
+      "city_aid": 111095
     },
     {
       "dev_id": 12021,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.39",
+      "vendor_name": "华为",
+      "prov_aid": 11020,
+      "city_aid": 1110204
     },
     {
       "dev_id": 12026,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.40",
+      "vendor_name": "华为",
+      "prov_aid": 11020,
+      "city_aid": 1110204
     },
     {
       "dev_id": 12076,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.240.161.241",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110176
     },
     {
       "dev_id": 12411,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.41",
+      "vendor_name": "华为",
+      "prov_aid": 11020,
+      "city_aid": 1110202
     },
     {
       "dev_id": 12766,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "241.56.1.202",
+      "vendor_name": "华三",
+      "prov_aid": 11024,
+      "city_aid": 1110229
     },
     {
       "dev_id": 12783,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.64",
+      "vendor_name": "华为",
+      "prov_aid": 11027,
+      "city_aid": 1110252
     },
     {
       "dev_id": 12785,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.65",
+      "vendor_name": "华为",
+      "prov_aid": 11027,
+      "city_aid": 1110252
     },
     {
       "dev_id": 13367,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.26",
+      "vendor_name": "华为",
+      "prov_aid": 1104,
+      "city_aid": 1110323
     },
     {
       "dev_id": 13370,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.27",
+      "vendor_name": "华为",
+      "prov_aid": 1104,
+      "city_aid": 1110323
     },
     {
       "dev_id": 13802,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.28",
+      "vendor_name": "华为",
+      "prov_aid": 1104,
+      "city_aid": 1110324
     },
     {
       "dev_id": 14186,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.48",
+      "vendor_name": "华为",
+      "prov_aid": 1107,
+      "city_aid": 111044
     },
     {
       "dev_id": 14189,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.49",
+      "vendor_name": "华为",
+      "prov_aid": 1107,
+      "city_aid": 111044
     },
     {
       "dev_id": 14281,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.56",
+      "vendor_name": "华为",
+      "prov_aid": 11012,
+      "city_aid": 111097
     },
     {
       "dev_id": 14283,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.57",
+      "vendor_name": "华为",
+      "prov_aid": 11012,
+      "city_aid": 111097
     },
     {
       "dev_id": 14317,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.50",
+      "vendor_name": "华为",
+      "prov_aid": 11025,
+      "city_aid": 1110347
     },
     {
       "dev_id": 14324,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.51",
+      "vendor_name": "华为",
+      "prov_aid": 11025,
+      "city_aid": 1110347
     },
     {
       "dev_id": 14452,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.4",
+      "vendor_name": "华为",
+      "prov_aid": 11019,
+      "city_aid": 1110186
     },
     {
       "dev_id": 14472,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.5",
+      "vendor_name": "华为",
+      "prov_aid": 11019,
+      "city_aid": 1110187
     },
     {
       "dev_id": 14599,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.6",
+      "vendor_name": "华为",
+      "prov_aid": 11019,
+      "city_aid": 1110183
     },
     {
       "dev_id": 15268,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.14",
+      "vendor_name": "华为",
+      "prov_aid": 11030,
+      "city_aid": 1110308
     },
     {
       "dev_id": 15274,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.15",
+      "vendor_name": "华为",
+      "prov_aid": 11030,
+      "city_aid": 1110308
     },
     {
       "dev_id": 15412,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "251.232.51.156",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110288
     },
     {
       "dev_id": 15625,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.22",
+      "vendor_name": "华为",
+      "prov_aid": 11026,
+      "city_aid": 1110341
     },
     {
       "dev_id": 15628,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.23",
+      "vendor_name": "华为",
+      "prov_aid": 11026,
+      "city_aid": 1110341
     },
     {
       "dev_id": 16356,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.44",
+      "vendor_name": "华为",
+      "prov_aid": 11024,
+      "city_aid": 1110233
     },
     {
       "dev_id": 16361,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.45",
+      "vendor_name": "华为",
+      "prov_aid": 11024,
+      "city_aid": 1110233
     },
     {
       "dev_id": 17045,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.46",
+      "vendor_name": "华为",
+      "prov_aid": 11028,
+      "city_aid": 1110254
     },
     {
       "dev_id": 17049,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.47",
+      "vendor_name": "华为",
+      "prov_aid": 11028,
+      "city_aid": 1110254
     },
     {
       "dev_id": 17277,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.241.14.43",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110165
     },
     {
       "dev_id": 17675,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.20",
+      "vendor_name": "华为",
+      "prov_aid": 11021,
+      "city_aid": 1110207
     },
     {
       "dev_id": 17679,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.21",
+      "vendor_name": "华为",
+      "prov_aid": 11021,
+      "city_aid": 1110207
     },
     {
       "dev_id": 17805,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "247.167.95.99",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110277
     },
     {
       "dev_id": 17819,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.33",
+      "vendor_name": "华为",
+      "prov_aid": 11018,
+      "city_aid": 1110175
     },
     {
       "dev_id": 17986,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.29",
+      "vendor_name": "华为",
+      "prov_aid": 11018,
+      "city_aid": 1110174
     },
     {
       "dev_id": 17992,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.30",
+      "vendor_name": "华为",
+      "prov_aid": 11018,
+      "city_aid": 1110174
     },
     {
       "dev_id": 18073,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.31",
+      "vendor_name": "华为",
+      "prov_aid": 11018,
+      "city_aid": 1110176
     },
     {
       "dev_id": 18122,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.32",
+      "vendor_name": "华为",
+      "prov_aid": 11018,
+      "city_aid": 1110165
     },
     {
       "dev_id": 18603,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.42",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111078
     },
     {
       "dev_id": 18606,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.43",
+      "vendor_name": "华为",
+      "prov_aid": 11010,
+      "city_aid": 111078
     },
     {
       "dev_id": 18946,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "188.12.56.112",
+      "vendor_name": "迪普科技",
+      "prov_aid": 1106,
+      "city_aid": 111030
     },
     {
       "dev_id": 18992,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.9",
+      "vendor_name": "华为",
+      "prov_aid": 11014,
+      "city_aid": 1110119
     },
     {
       "dev_id": 19007,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "188.12.56.115",
+      "vendor_name": "迪普科技",
+      "prov_aid": 1106,
+      "city_aid": 111030
     },
     {
       "dev_id": 19582,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.7",
+      "vendor_name": "华为",
+      "prov_aid": 11014,
+      "city_aid": 1110128
     },
     {
       "dev_id": 19596,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.8",
+      "vendor_name": "华为",
+      "prov_aid": 11014,
+      "city_aid": 1110128
     },
     {
       "dev_id": 19787,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.12.148.3",
+      "vendor_name": "华三",
+      "prov_aid": 1106,
+      "city_aid": 111029
     },
     {
       "dev_id": 19788,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.12.148.4",
+      "vendor_name": "华三",
+      "prov_aid": 1106,
+      "city_aid": 111029
     },
     {
       "dev_id": 20070,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.18",
+      "vendor_name": "华为",
+      "prov_aid": 1108,
+      "city_aid": 111064
     },
     {
       "dev_id": 20071,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.19",
+      "vendor_name": "华为",
+      "prov_aid": 1108,
+      "city_aid": 111064
     },
     {
       "dev_id": 20164,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "186.241.14.42",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110165
     },
     {
       "dev_id": 20341,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.68",
+      "vendor_name": "",
+      "prov_aid": 1109,
+      "city_aid": 111068
     },
     {
       "dev_id": 20342,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.69",
+      "vendor_name": "",
+      "prov_aid": 1109,
+      "city_aid": 111068
     },
     {
       "dev_id": 20458,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.66",
+      "vendor_name": "华为",
+      "prov_aid": 11016,
+      "city_aid": 1110143
     },
     {
       "dev_id": 20459,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.67",
+      "vendor_name": "华为",
+      "prov_aid": 11016,
+      "city_aid": 1110143
     },
     {
       "dev_id": 20514,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.10",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110288
     },
     {
       "dev_id": 20517,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.11",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110288
     },
     {
       "dev_id": 20691,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.13",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110277
     },
     {
       "dev_id": 20824,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.12",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110281
     },
     {
       "dev_id": 21043,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.16",
+      "vendor_name": "华为",
+      "prov_aid": 11015,
+      "city_aid": 1110139
     },
     {
       "dev_id": 21055,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.17",
+      "vendor_name": "华为",
+      "prov_aid": 11015,
+      "city_aid": 1110139
     },
     {
       "dev_id": 21430,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.62",
+      "vendor_name": "华为",
+      "prov_aid": 11013,
+      "city_aid": 1110107
     },
     {
       "dev_id": 21433,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.63",
+      "vendor_name": "华为",
+      "prov_aid": 11013,
+      "city_aid": 1110107
     },
     {
       "dev_id": 21832,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.54",
+      "vendor_name": "华为",
+      "prov_aid": 11017,
+      "city_aid": 1110148
     },
     {
       "dev_id": 21838,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.55",
+      "vendor_name": "华为",
+      "prov_aid": 11017,
+      "city_aid": 1110148
     },
     {
       "dev_id": 22238,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.2",
+      "vendor_name": "华为",
+      "prov_aid": 1105,
+      "city_aid": 1105
     },
     {
       "dev_id": 22240,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.3",
+      "vendor_name": "华为",
+      "prov_aid": 1105,
+      "city_aid": 1105
     },
     {
       "dev_id": 22277,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.60",
+      "vendor_name": "华为",
+      "prov_aid": 11034,
+      "city_aid": 1110326
     },
     {
       "dev_id": 22278,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.61",
+      "vendor_name": "华为",
+      "prov_aid": 11034,
+      "city_aid": 1110326
     },
     {
       "dev_id": 23436,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.70",
+      "vendor_name": "华为",
+      "prov_aid": 1102,
+      "city_aid": 11101
     },
     {
       "dev_id": 23437,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.71",
+      "vendor_name": "华为",
+      "prov_aid": 1102,
+      "city_aid": 11101
     },
     {
       "dev_id": 23916,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.58",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 23918,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.59",
+      "vendor_name": "华为",
+      "prov_aid": 11023,
+      "city_aid": 1110219
     },
     {
       "dev_id": 24133,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.34",
+      "vendor_name": "华为",
+      "prov_aid": 1106,
+      "city_aid": 111035
     },
     {
       "dev_id": 24144,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.35",
+      "vendor_name": "华为",
+      "prov_aid": 1106,
+      "city_aid": 111035
     },
     {
       "dev_id": 24450,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.36",
+      "vendor_name": "华为",
+      "prov_aid": 1106,
+      "city_aid": 111031
     },
     {
       "dev_id": 24457,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.72",
+      "vendor_name": "华为",
+      "prov_aid": 1106,
+      "city_aid": 111031
     },
     {
       "dev_id": 24678,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.6.208.41",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110180
     },
     {
       "dev_id": 24679,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.52",
+      "vendor_name": "华为",
+      "prov_aid": 1103,
+      "city_aid": 1103
     },
     {
       "dev_id": 24683,
       "dev_net": 8,
-      "dev_type": 35
+      "dev_type": 35,
+      "dev_role": -1,
+      "dev_ip": "90.105.12.53",
+      "vendor_name": "华为",
+      "prov_aid": 1103,
+      "city_aid": 1103
     },
     {
       "dev_id": 25438,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.6.208.42",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110180
     },
     {
       "dev_id": 34827,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.6.0.85",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110174
     },
     {
       "dev_id": 34877,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.6.0.84",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11018,
+      "city_aid": 1110174
     },
     {
       "dev_id": 35882,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.219",
+      "vendor_name": "华为",
+      "prov_aid": 11012,
+      "city_aid": 111097
     },
     {
       "dev_id": 36036,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.83",
+      "vendor_name": "华为",
+      "prov_aid": 11021,
+      "city_aid": 1110207
     },
     {
       "dev_id": 36272,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.79",
+      "vendor_name": "华为",
+      "prov_aid": 11015,
+      "city_aid": 1110139
     },
     {
       "dev_id": 36422,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.1.71",
+      "vendor_name": "华为",
+      "prov_aid": 1105,
+      "city_aid": 1105
     },
     {
       "dev_id": 36539,
       "dev_net": 4,
-      "dev_type": 16
+      "dev_type": 16,
+      "dev_role": -1,
+      "dev_ip": "91.158.2.135",
+      "vendor_name": "华为",
+      "prov_aid": 1106,
+      "city_aid": 111035
     },
     {
       "dev_id": 51364,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.1.0.15",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110287
     },
     {
       "dev_id": 56510,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.1.128.34",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110271
     },
     {
       "dev_id": 61634,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.0.64.2",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110274
     },
     {
       "dev_id": 80226,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.1.191.22",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110286
     },
     {
       "dev_id": 80391,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "90.57.198.43",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110285
     },
     {
       "dev_id": 90646,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.1.196.190",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110272
     },
     {
       "dev_id": 93173,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "90.58.229.29",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110273
     },
     {
       "dev_id": 98103,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.2.255.32",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110276
     },
     {
       "dev_id": 98263,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "91.157.121.43",
+      "vendor_name": "",
+      "prov_aid": 11030,
+      "city_aid": 1110293
     },
     {
       "dev_id": 107013,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.2.128.29",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110281
     },
     {
       "dev_id": 109531,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.1.252.133",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110269
     },
     {
       "dev_id": 116850,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.2.48.104",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110275
     },
     {
       "dev_id": 117530,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.2.124.17",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110270
     },
     {
       "dev_id": 131967,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "93.2.223.129",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110284
     },
     {
       "dev_id": 166936,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "94.132.98.219",
+      "vendor_name": "迪普科技",
+      "prov_aid": 11029,
+      "city_aid": 1110278
     },
     {
       "dev_id": 167243,
       "dev_net": 1,
-      "dev_type": 4
+      "dev_type": 4,
+      "dev_role": -1,
+      "dev_ip": "188.210.200.129",
+      "vendor_name": "华为",
+      "prov_aid": 11029,
+      "city_aid": 1110279
     }
   ]
 }
